@@ -1,0 +1,652 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  background-color: #e3e7eb;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.nav-left ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-left ul li {
+  font-size: 1rem;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: orangered;
+  background-color: white;
+}
+
+.nav-left ul li img {
+  margin-left: 25px;
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-left ul li a:active {
+  font-weight: bold;
+}
+
+.nav-left .active {
+  font-weight: bold;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav-right a {
+  text-decoration: none;
+  background-color: #111727;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 7px;
+  margin-right: 70px;
+  font-weight: 600;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  margin-right: 30px;
+}
+
+.navbar .menu-toggle input {
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  left: -13px;
+  top: -8px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.navbar .menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+  transition: 0.3s;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+  transition: 0.3s;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: 0.3s;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  transition: 0.3s;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+  transition: 0.3s;
+}
+
+.hamb-menu {
+  display: none;
+  background-color: #d3d3d3;
+  padding-bottom: 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.hamb-menu a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+  color: orangered;
+}
+
+.hamb-menu .contact-me {
+  text-decoration: none;
+  background-color: #111727;
+  text-align: center;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 15px 100px 0px;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  margin: 50px auto;
+  border: 1px solid rgb(245, 242, 242);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px gray;
+  background-color: #fff;
+}
+
+.wrap {
+  width: 80%;
+  margin: 30px 80px;
+}
+
+.wrap-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrap h1 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.wrap .isi {
+  text-align: justify;
+  padding-left: 0px;
+  padding-bottom: 37px;
+}
+
+.wrap .contact {
+  color: white;
+  text-decoration: none;
+  background-color: #111727;
+  padding: 8px 25px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 30px;
+  transition: 0.5s ease-in-out;
+}
+
+.wrap .cv {
+  padding-top: 28px;
+}
+
+.sosmed {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 50px 80px 60px;
+}
+
+.sosmed i {
+  text-align: center;
+  padding: 5px;
+}
+
+.linkedin {
+  color: white;
+  background-color: #111727;
+  padding: 5px 6px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.ig {
+  color: white;
+  background-color: #111727;
+  padding: 5px 6px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.fb {
+  color: white;
+  background-color: #111727;
+  padding: 5px 8px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.twitter {
+  color: white;
+  background-color: #111727;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.linkedin:hover {
+  color: #111727;
+  background-color: #cfcaca;
+  border-radius: 50%;
+  padding: 5px 6px;
+}
+
+.ig:hover {
+  color: #111727;
+  background-color: #cfcaca;
+  border-radius: 50%;
+  padding: 5px 6px;
+}
+
+.fb:hover {
+  color: #111727;
+  background-color: #cfcaca;
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+
+.twitter:hover {
+  color: #111727;
+  background-color: #cfcaca;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.card {
+  margin: 50px 60px 100px 10px;
+  width: 350px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px gray;
+}
+
+.card h2 {
+  margin: 0;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.card p {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.form {
+  width: 500px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.form h1 {
+  font-weight: 900;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.form .add-project {
+  font-weight: 900;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.form .wrap-dat {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form .stardat {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.form .enddat {
+  width: 50%;
+}
+
+.form div {
+  margin-top: 10px;
+}
+
+.form div label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.form div input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 5px;
+  font-size: 15px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.form .tech {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form .tech .label-tech {
+  color: #000;
+  font-weight: 400;
+}
+
+.form .tech input {
+  width: 10%;
+}
+
+.form .tech .side-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .tech .side-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+}
+
+.form .tech label {
+  color: #514a4a;
+}
+
+.form .input-image-group {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form .input-image-group label span {
+  font-size: 1rem;
+  background: #e4e4e4;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: #b2abab;
+  border-radius: 4px;
+}
+
+.form .input-image-group label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form div textarea {
+  resize: none;
+}
+
+.form div button {
+  background-color: #111727;
+  padding: 5px 30px;
+  color: white;
+  border-radius: 30px;
+  border: 1px solid #111727;
+  float: right;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.screen-project {
+  margin-top: 130px;
+  background-color: #fff;
+  padding-bottom: 30px;
+}
+
+.screen-project h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.wrap-project {
+  margin: 50px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.wrap-project .card-project {
+  margin-left: 30px;
+  margin-bottom: 35px;
+  width: 30%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px gray;
+}
+
+.wrap-project .card-project .card-avatar {
+  width: 100%;
+  padding: 15px 15px 5px 15px;
+  border-radius: 20px;
+}
+
+.wrap-project .card-project h3,
+.duration,
+p,
+i,
+.btn-card {
+  padding-left: 15px;
+}
+
+.wrap-project .card-project .duration {
+  color: #5b5555;
+  font-size: 0.9rem;
+  padding-bottom: 25px;
+}
+
+.wrap-project .card-project p {
+  text-align: justify;
+  width: 85%;
+  padding-bottom: 20px;
+}
+
+.wrap-project .card-project img {
+  width: 50px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.wrap-project .card-project .btn-card {
+  padding-right: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.wrap-project .card-project .btn-card a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #111727;
+  padding: 2px 65px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 550px) {
+  .nav-left ul li a {
+    display: none;
+  }
+
+  .nav-right a {
+    display: none;
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .hamb-menu {
+    display: block;
+    transform: translateY(-140%);
+    transition: 0.5s;
+  }
+
+  .hamb-menu.active {
+    transform: translateY(0);
+  }
+
+  .hamb-menu .contact-me {
+    display: block;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .wrap {
+    margin: 30px auto;
+  }
+
+  .wrap-main {
+    display: block;
+  }
+
+  .wrap .contact {
+    padding: 8px 15px;
+  }
+
+  .wrap .cv {
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+
+  .sosmed {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 250px;
+    margin: 40px auto;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .form {
+    width: 350px;
+  }
+
+  .form h1 {
+    font-size: 1.6rem;
+  }
+
+  .form .add-project {
+    font-size: 1.6rem;
+  }
+
+  .form div label {
+    font-size: 1.1rem;
+  }
+
+  .wrap-project {
+    padding-right: 30px;
+  }
+
+  .wrap-project .card-project {
+    width: 100%;
+  }
+
+  .wrap-project .card-project .btn-card a {
+    padding: 2px 35px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+  .nav-right a {
+    margin-right: 30px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .wrap {
+    width: auto;
+    margin: 30px 60px;
+  }
+
+  .sosmed {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    margin: 50px auto;
+  }
+
+  .wrap-project {
+    padding-right: 20px;
+    padding-left: 80px;
+  }
+
+  .wrap-project .card-project {
+    width: 40%;
+  }
+
+  .wrap-project .card-project .btn-card {
+    padding: 0px 15px;
+  }
+
+  .wrap-project .card-project .btn-card a {
+    padding: 2px 33px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 9 - Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="20x20"
+      href="assets/image/logo.png"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul>
+          <li><img src="assets/image/logo.png" alt="My Logo" width="50" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="myProject.html">My Project</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div class="menu-toggle">
+        <input type="checkbox" class="input-menu" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="hamb-menu">
+      <a href="index.html">Home</a>
+      <a href="myProject.html">My Project</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html" class="contact-me">Contact Me</a>
+    </div>
+
+    <!--layout-->
+    <div class="container">
+      <form class="form">
+        <h2 style="text-align: center; margin-bottom: 20px">GET IN TOUCH</h2>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <select name="subject" id="subject">
+            <option value=""></option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="Discusion">Discusion</option>
+            <option value="Hiring">Hiring</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+          <button type="button" id="btn-contact" onclick="getContact()">
+            submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

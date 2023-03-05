@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-9 testimonials</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="20x20"
+      href="assets/image/logo.png"
+    />
+    <link rel="stylesheet" href="css/testimonial.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img src="assets/image/logo.png" alt="My Logo" width="50" />
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="myProject.html">My Project</a></li>
+          <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div class="menu-toggle">
+        <input type="checkbox" class="input-menu" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="hamb-menu">
+      <a href="index.html">Home</a>
+      <a href="myProject.html">My Project</a>
+      <a href="testimonials.html" class="active" style="color: green"
+        >Testimonials</a
+      >
+      <a href="contact.html" class="contact-me">Contact Me</a>
+    </div>
+
+    <div class="container">
+      <h1>My Testimonials</h1>
+      <div class="container-rating">
+        <h2>Rating</h2>
+        <div class="rating">
+          <button class="rating-btn" onclick="getAllTestimonials()">All</button>
+          <button class="rating-btn" onclick="getFilteredTestimonials(1)">
+            1 <i class="fa-solid fa-star" style="color: goldenrod"></i>
+          </button>
+          <button class="rating-btn" onclick="getFilteredTestimonials(2)">
+            2 <i class="fa-solid fa-star" style="color: goldenrod"></i>
+          </button>
+          <button class="rating-btn" onclick="getFilteredTestimonials(3)">
+            3 <i class="fa-solid fa-star" style="color: goldenrod"></i>
+          </button>
+          <button class="rating-btn" onclick="getFilteredTestimonials(4)">
+            4 <i class="fa-solid fa-star" style="color: goldenrod"></i>
+          </button>
+          <button class="rating-btn" onclick="getFilteredTestimonials(5)">
+            5 <i class="fa-solid fa-star" style="color: goldenrod"></i>
+          </button>
+        </div>
+      </div>
+      <section class="testimonials" id="testimonials"></section>
+    </div>
+
+    <script src="js/ajx.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 9 - myProject</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="20x20"
+      href="assets/image/logo.png"
+    />
+    <link rel="stylesheet" href="css/project.css" />
+  </head>
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img src="assets/image/logo.png" alt="My Logo" width="50" />
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="myProject.html" class="active">My Project</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div class="menu-toggle">
+        <input type="checkbox" class="input-menu" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="hamb-menu">
+      <a href="index.html">Home</a>
+      <a href="myProject.html" class="active" style="color: green"
+        >My Project</a
+      >
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html" class="contact-me">Contact Me</a>
+    </div>
+    <!--Navbar end-->
+
+    <div class="container">
+      <form class="form" onsubmit="getProject(event)">
+        <h1 style="text-align: center; margin-bottom: 20px">ADD MY PROJECT</h1>
+        <div>
+          <label for="pronam">Project Name</label>
+          <input type="text" name="pronam" id="projectname" />
+        </div>
+        <div class="wrap-dat">
+          <div class="stardat">
+            <label for="stadat">Start Date</label>
+            <input type="date" name="stadat" id="startdate" />
+          </div>
+          <div class="enddat">
+            <label for="enddat">End Date</label>
+            <input type="date" name="enddat" id="enddate" />
+          </div>
+        </div>
+        <div>
+          <label for="desc">Description</label>
+          <textarea name="desc" id="description" cols="30" rows="6"></textarea>
+        </div>
+        <div class="wrap-tech">
+          <div class="tech">
+            <div class="side-left">
+              <label class="label-tech">Technologies</label>
+              <div class="side-left-item">
+                <input type="checkbox" name="tech" id="nodejs" />
+                <label for="nodejs">Node Js</label>
+              </div>
+              <div class="side-left-item">
+                <input type="checkbox" name="tech" id="reactjs" />
+                <label for="reactjs">React Js</label>
+              </div>
+            </div>
+            <div class="side-right">
+              <div class="side-right-item">
+                <input type="checkbox" name="tech" id="nextjs" />
+                <label for="nextjs">Next Js</label>
+              </div>
+              <div class="side-right-item">
+                <input type="checkbox" name="tech" id="typescript" />
+                <label for="typescript">TypeScript</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="input-image">Upload Image</label>
+
+          <input
+            type="file"
+            id="blog-img"
+            name="blog-img"
+            style="cursor: pointer"
+          />
+        </div>
+        <div>
+          <button id="btn-project">submit</button>
+        </div>
+      </form>
+    </div>
+    <!--container2-->
+    <div class="screen-project">
+      <h1>MY PROJECT</h1>
+
+      <div class="wrap-project" id="wrap-project">
+        <div class="card-project">
+          <a href="">
+            <img
+              src="assets/image/what-is-a-web-developer.jpg"
+              alt=""
+              class="card-avatar"
+            />
+          </a>
+          <h3>Dumbways Mobile App - 2023</h3>
+          <p class="duration">durasi: 3 bulan</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
+            nobis? Doloribus in minus dolorem.
+          </p>
+          <img src="assets/image/nodejs.png" alt="" />
+          <img src="assets/image/reactjs.png" alt="" />
+          <img src="assets/image/nextjs.png" alt="" />
+          <img src="assets/image/typescript.png" alt="" />
+          <div class="btn-card">
+            <a href="#">edit</a>
+            <a href="#">delete</a>
+          </div>
+        </div>
+
+        <div class="card-project">
+          <a href="">
+            <img
+              src="assets/image/what-is-a-web-developer.jpg"
+              alt=""
+              class="card-avatar"
+            />
+          </a>
+          <h3>Dumbways Mobile App - 2023</h3>
+          <p class="duration">durasi: 3 bulan</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
+            nobis? Doloribus in minus dolorem.
+          </p>
+          <img src="assets/image/nodejs.png" alt="" />
+          <img src="assets/image/reactjs.png" alt="" />
+          <img src="assets/image/nextjs.png" alt="" />
+          <img src="assets/image/typescript.png" alt="" />
+          <div class="btn-card">
+            <a href="#">edit</a>
+            <a href="#">delete</a>
+          </div>
+        </div>
+        <div class="card-project">
+          <a href="">
+            <img
+              src="assets/image/what-is-a-web-developer.jpg"
+              alt=""
+              class="card-avatar"
+            />
+          </a>
+          <h3>Dumbways Mobile App - 2023</h3>
+          <p class="duration">durasi: 3 bulan</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
+            nobis? Doloribus in minus dolorem.
+          </p>
+          <img src="assets/image/nodejs.png" alt="" />
+          <img src="assets/image/reactjs.png" alt="" />
+          <img src="assets/image/nextjs.png" alt="" />
+          <img src="assets/image/typescript.png" alt="" />
+          <div class="btn-card">
+            <a href="#">edit</a>
+            <a href="#">delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/blog.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
